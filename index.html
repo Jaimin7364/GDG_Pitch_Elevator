@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pitching for Cloud – GDG CHARUSAT</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            max-width: 800px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .header {
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            color: #333;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .header p {
+            color: #666;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .gdg-logo {
+            display: inline-block;
+            padding: 10px 20px;
+            background: linear-gradient(45deg, #4285f4, #34a853, #fbbc05, #ea4335);
+            color: white;
+            border-radius: 25px;
+            font-weight: bold;
+            text-decoration: none;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .presentation-container {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            margin: 20px 0;
+        }
+
+        .presentation-iframe {
+            width: 100%;
+            max-width: 700px;
+            height: 450px;
+            border: none;
+            border-radius: 10px;
+        }
+
+        .footer {
+            margin-top: 20px;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .present-btn {
+            background: linear-gradient(45deg, #4285f4, #34a853);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            margin: 20px 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(66, 133, 244, 0.3);
+        }
+
+        .present-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(66, 133, 244, 0.4);
+        }
+
+        .present-btn:active {
+            transform: translateY(0);
+        }
+
+        .fullscreen-mode {
+            position: fixed;
+            top: 30px;
+            left: 30px;
+            right: 30px;
+            bottom: 30px;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            border-radius: 15px;
+        }
+
+        .fullscreen-mode .presentation-container {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        .fullscreen-mode .presentation-container > div {
+            height: 100% !important;
+            padding-top: 0 !important;
+        }
+
+        .fullscreen-mode iframe {
+            height: 100% !important;
+        }
+
+        .exit-fullscreen {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            color: #333;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .exit-fullscreen:hover {
+            background: white;
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+                margin: 10px;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .header p {
+                font-size: 1rem;
+            }
+
+            .presentation-iframe {
+                height: 350px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .presentation-iframe {
+                height: 300px;
+            }
+
+            .header h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="gdg-logo">GDG CHARUSAT</div>
+            <h1>Pitching for Cloud</h1>
+            <p>Elevator Pitch Presentation</p>
+        </div>
+
+        <div class="presentation-container">
+            <div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
+             padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+             border-radius: 8px; will-change: transform;">
+              <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+                src="https://www.canva.com/design/DAGzTJaEUek/1C3yqa47hChLOcC_M9_oWA/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+              </iframe>
+            </div>
+        </div>
+
+        <button class="present-btn" onclick="enterFullscreen()">
+            Present
+        </button>
+
+        <div class="footer">
+            <div style="margin-bottom: 15px;">
+                <a href="https://www.canva.com/design/DAGzTJaEUek/1C3yqa47hChLOcC_M9_oWA/view?utm_content=DAGzTJaEUek&utm_campaign=designshare&utm_medium=embeds&utm_source=link" 
+                   target="_blank" rel="noopener" 
+                   style="color: #4285f4; text-decoration: none; font-weight: 500;">
+                    Pitching-for-Cloud-GDG-CHARUSAT.pptx
+                </a> by Jaimin Raval
+            </div>
+            <p>© 2025 GDG CHARUSAT • Cloud Innovation</p>
+        </div>
+    </div>
+
+    <script>
+        function enterFullscreen() {
+            const container = document.querySelector('.container');
+            const presentationContainer = document.querySelector('.presentation-container');
+            
+            // Create fullscreen overlay
+            const fullscreenDiv = document.createElement('div');
+            fullscreenDiv.className = 'fullscreen-mode';
+            fullscreenDiv.id = 'fullscreen-overlay';
+            
+            // Create exit button
+            const exitBtn = document.createElement('button');
+            exitBtn.className = 'exit-fullscreen';
+            exitBtn.innerHTML = '✕ Exit';
+            exitBtn.onclick = exitFullscreen;
+            
+            // Clone the presentation container
+            const clonedPresentation = presentationContainer.cloneNode(true);
+            
+            // Add elements to fullscreen div
+            fullscreenDiv.appendChild(exitBtn);
+            fullscreenDiv.appendChild(clonedPresentation);
+            
+            // Add to body
+            document.body.appendChild(fullscreenDiv);
+            
+            // Prevent body scroll
+            document.body.style.overflow = 'hidden';
+            
+            // Add escape key listener
+            document.addEventListener('keydown', handleEscape);
+        }
+        
+        function exitFullscreen() {
+            const fullscreenOverlay = document.getElementById('fullscreen-overlay');
+            if (fullscreenOverlay) {
+                document.body.removeChild(fullscreenOverlay);
+                document.body.style.overflow = 'auto';
+                document.removeEventListener('keydown', handleEscape);
+            }
+        }
+        
+        function handleEscape(event) {
+            if (event.key === 'Escape') {
+                exitFullscreen();
+            }
+        }
+    </script>
+</body>
+</html>
